@@ -1,38 +1,24 @@
 const pi = 3.14;
 
 const calculateArea = (choice, side, length, breadth, radius) => {
-  let area = 0.0;
+  if (typeof choice !== "string") return -1;
 
-  switch (choice) {
+  const isValidNumber = (num) => typeof num === "number" && !isNaN(num);
+
+  switch (choice.toLowerCase()) {
     case "square":
-      if (typeof side === "number" && !isNaN(side)) {
-        area = side ** 2;
-      } else {
-        return -1;
-      }
-      break;
+      return isValidNumber(side) ? side * side : -1;
+
     case "rectangle":
-      if (
-        typeof length === "number" &&
-        typeof breadth === "number" &&
-        !isNaN(length) &&
-        !isNaN(breadth)
-      ) {
-        area = length * breadth;
-      } else {
-        return -1;
-      }
-      break;
+      return isValidNumber(length) && isValidNumber(breadth)
+        ? length * breadth
+        : -1;
+
     case "circle":
-      if (typeof radius === "number" && !isNaN(radius)) {
-        area = pi * radius * radius;
-      } else {
-        return -1;
-      }
-      break;
+      return isValidNumber(radius) ? pi * radius * radius : -1;
+
     default:
       return -1;
   }
-  return area;
 };
 module.exports = { calculateArea };
