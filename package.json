@@ -1,0 +1,27 @@
+{
+  "name": "area-calculator",
+  "version": "1.0.0",
+  "description": "Ron wishes to renovate his barn. He thinks that creating fences and keeping the animals separately would help him feed the animals easily and solve the problem of animals getting mixed. For this, he plans to divide the area into three parts. He will create a square area for the chickens, a circular area for the ducks and a rectangular area for the cows.​",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thet-naing-soe/area-calculator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/thet-naing-soe/area-calculator/issues"
+  },
+  "homepage": "https://github.com/thet-naing-soe/area-calculator#readme"
+}
